@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<p>City Temperature Description Humidity Sunrise      Sunset</p>
+<p>{{ weather_one.city }} {{ weather_one.temp }} {{ weather_one.description }} {{ weather_one.humidity }} {{ weather_one.sunrise }} {{ weather_one.sunset}}</p>
+<p>{{ weather_two.city }} {{ weather_two.temp }} {{ weather_two.description }} {{weather_two.humidity }} {{ weather_two.sunrise }} {{ weather_two.sunset }}</p>
+
+{% endblock %}

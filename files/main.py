@@ -1,7 +1,8 @@
 import os
 from datetime import datetime
 import pytz
-
+from pytz import timezone
+import flask
 from flask import Flask, render_template, request, redirect, url_for, session
 import requests
 import json
@@ -15,6 +16,8 @@ app = Flask(__name__)
 #api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=76213925c4e0771dbabb037e3a681e74
 
 #city = input from post request submit 
+eastern = timezone('US/Eastern')
+fmt = "%H:%M:%S %Z%z"
 
 city = "Berlin"
 url = "http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&APPID=76213925c4e0771dbabb037e3a681e74".format(city)
@@ -25,8 +28,8 @@ weather = {
 'city': r['name'], 
 'country': r['sys']['country'],
 'humidity': r['main']['humidity'],
-'sunrise': datetime.fromtimestamp(r['sys']['sunrise']),
-'sunset': datetime.fromtimestamp(r['sys']['sunset']),
+'sunrise': (datetime.fromtimestamp(r['sys']['sunrise'])).strftime(fmt),
+'sunset': (datetime.fromtimestamp(r['sys']['sunset'])).strftime(fmt),
 }
 print(weather)
 
@@ -43,8 +46,8 @@ def get_weather():
         'city': r_one['name'], 
         'country': r_one['sys']['country'],
         'humidity': r_one['main']['humidity'],
-        'sunrise': datetime.fromtimestamp(r_one['sys']['sunrise']),
-        'sunset': datetime.fromtimestamp(r_one['sys']['sunset'])
+        'sunrise': (datetime.fromtimestamp(r_one['sys']['sunrise'])).strftime(fmt),
+        'sunset': (datetime.fromtimestamp(r_one['sys']['sunset'])).strftime(fmt)
         }
         print(weather_one)
 
@@ -57,8 +60,8 @@ def get_weather():
         'city': r_two['name'],
         'country': r_two['sys']['country'],
         'humidity': r_two['main']['humidity'],
-        'sunrise': datetime.fromtimestamp(r_two['sys']['sunrise']),
-        'sunset': datetime.fromtimestamp(r_two['sys']['sunset'])
+        'sunrise': (datetime.fromtimestamp(r_two['sys']['sunrise'])).strftime(fmt),
+        'sunset': (datetime.fromtimestamp(r_two['sys']['sunset'])).strftime(fmt)
 
         }
       

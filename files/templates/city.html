@@ -1,29 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
 <table>
-	<tr>
+<tr>
 <th>City</th> 
 <th>Temperature</th>
 <th>Description</th>
-<th>Humidity</th> 
-<th>Sunrise</th>
-<th>Sunset</th>
+<th>Humidity</th>
+<tr>
+	<td>{{ weather_one.city }}, {{ weather_one.country }}</td>
+    <td>{{ weather_one.temp }}</td>
+    <td>{{ weather_one.description }}</td>
+    <td>{{ weather_one.humidity }}</td>
 </tr>
 <tr>
-	<td>{{ weather_one.city }}</td>
-	<td>{{ weather_one.temp }}</td>
-	<td>{{ weather_one.description }}</td>
-	<td>{{ weather_one.humidity }}</td>
-	<td>{{ weather_one.sunrise }}</td>
-	<td>{{ weather_one.sunset}}</td>
-	</tr>
-<tr>
-	<td>{{ weather_two.city }}</td>
-	<td>{{ weather_two.temp }}</td>
-	<td>{{ weather_two.description }}</td>
-	<td>{{ weather_two.humidity }}</td>
-	<td>{{ weather_two.sunrise }}</td>
-	<td>{{ weather_two.sunset}}</td>
-	</tr>
+<td>{{ weather_two.city }}, {{ weather_two.country }}</td>
+    <td>{{ weather_two.temp }}</td>
+    <td>{{ weather_two.description }}</td>
+    <td>{{ weather_two.humidity }}</td>
+</tr>
 </table>
 {% endblock %}

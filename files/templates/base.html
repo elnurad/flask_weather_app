@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Weather App</title>
-	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<!-- <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+	<link type="text/css" rel="stylesheet" href="/static/style.css" >
 </head>
 <body>
+	<div class="box">
 <h1>Compare the Weather of 2 Cities:</h1>
 <form action="/" method="POST">
 	
@@ -13,6 +16,6 @@
 	<input type="submit" value="Show Weather" />
 </form>
 {% block content %} {% endblock %}
-
+</div>
 </body>
 </html>

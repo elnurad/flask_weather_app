@@ -1,4 +1,25 @@
-body {
-	background-color: powderblue;
-	
+.box {
+	position: relative;
+	margin: auto;
+	display: block;
+	margin-top: 5%;
+	height: 450px;
+	width: 600px;
 }
+
+
+
+body {
+	background-color: #E8E8E8;
+
+}
+
+input {
+	border-style: solid;
+	border-color: black;
+
+}
+th, td {
+	margin: 8px;
+}
+

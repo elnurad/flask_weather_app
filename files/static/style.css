@@ -1,3 +1,9 @@
+body {
+	background-color: #E6D8D8;
+	font-size: 100%;
+	opacity: 05;
+
+}
 .box {
 	position: relative;
 	margin: auto;
@@ -9,14 +15,16 @@
 
 
 
-body {
-	background-color: #E8E8E8;
-
+h1{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.8em;
 }
 
+
 input {
-	border-style: solid;
-	border-color: black;
+	border-style: solid thin;
+	border-color: #7E7676;
+	box-shadow: none;
 
 }
 th, td {

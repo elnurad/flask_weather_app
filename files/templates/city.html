@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-<table>
+<table border="1">
 <tr>
-<th>City</th> 
-<th>Temperature</th>
-<th>Description</th>
-<th>Humidity</th>
+<td><b>City</b></td> 
+<td><b>Temperature</b></td>
+<td><b>Description</b></td>
+<td><b>Humidity</b></td>
 <tr>
 	<td>{{ weather_one.city }}, {{ weather_one.country }}</td>
     <td>{{ weather_one.temp }}</td>
